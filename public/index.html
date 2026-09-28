@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pennywise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Pennywise</h1>
+        <p>Your money, simply organized.</p>
+    </header>
+
+    <main>
+
+        <section class="summary">
+            <h2>Balance</h2>
+            <p id="balance">₹0.00</p>
+
+            <div>
+                <span>Income</span>
+                <span id="income">₹0.00</span>
+            </div>
+
+            <div>
+                <span>Expenses</span>
+                <span id="expenses">₹0.00</span>
+            </div>
+        </section>
+
+        <section class="add-record">
+            <h2>Add a record</h2>
+
+            <input type="number" id="amount" placeholder="Amount">
+
+            <select id="type">
+                <option value="expense">Expense</option>
+                <option value="income">Income</option>
+            </select>
+
+            <select id="category">
+                <option value="">Select category</option>
+            </select>
+
+            <input type="text" id="note" placeholder="What was it for?">
+
+            <button id="addButton">Add record</button>
+        </section>
+
+        <section class="records">
+            <h2>Records</h2>
+
+            <div id="recordList"></div>
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #251211;
+    color: #f1e8df;
+}
+
+header {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 35px 20px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+    color: #fbb45e;
+}
+
+header p {
+    margin: 6px 0 0;
+    color: #c99379;
+}
+
+main {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+section {
+    background: #353b56;
+    padding: 20px;
+    margin-bottom: 16px;
+    border: 1px solid #7d7585;
+    border-radius: 6px;
+}
+
+h2 {
+    margin: 0 0 16px;
+    font-size: 18px;
+    color: #fbb45e;
+}
+
+/* Summary */
+
+.summary {
+    text-align: left;
+}
+
+#balance {
+    font-size: 34px;
+    font-weight: normal;
+    color: #fbb45e;
+    margin: 5px 0 22px;
+}
+
+.summary>div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-top: 1px solid #7d7585;
+}
+
+.summary>div span:last-child {
+    font-weight: bold;
+    color: #f1e8df;
+}
+
+/* Add record */
+
+.add-record {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.add-record input,
+.add-record select {
+    padding: 12px;
+    font-size: 15px;
+    color: #f1e8df;
+    background: #251211;
+    border: 1px solid #7d7585;
+    border-radius: 4px;
+    outline: none;
+}
+
+.add-record input::placeholder {
+    color: #7d7585;
+}
+
+.add-record input:focus,
+.add-record select:focus {
+    border-color: #fbb45e;
+}
+
+.add-record button {
+    padding: 12px;
+    font-size: 15px;
+    background: #fbb45e;
+    color: #251211;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.add-record button:hover {
+    background: #c99379;
+}
+
+/* Records */
+
+.record {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 14px 0;
+    border-bottom: 1px solid #7d7585;
+}
+
+.record:last-child {
+    border-bottom: none;
+}
+
+.record strong {
+    color: #fbb45e;
+}
+
+.record>span {
+    margin-left: auto;
+    font-weight: bold;
+    color: #f1e8df;
+}
+
+.record p {
+    width: 100%;
+    margin: 2px 0 4px;
+    color: #c99379;
+}
+
+.edit-button,
+.delete-button {
+    padding: 6px 10px;
+    font-size: 13px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.edit-button {
+    background: transparent;
+    color: #fbb45e;
+    border: 1px solid #fbb45e;
+}
+
+.delete-button {
+    background: transparent;
+    color: #c99379;
+    border: 1px solid #c99379;
+}
+
+.edit-button:hover {
+    background: #fbb45e;
+    color: #251211;
+}
+
+.delete-button:hover {
+    background: #c99379;
+    color: #251211;
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+    header {
+        padding-top: 25px;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    section {
+        padding: 16px;
+    }
+
+    #balance {
+        font-size: 30px;
+    }
+}
+
+.record strong.income {
+    color: #fbb45e;
+}
+
+.record strong.expense {
+    color: #c99379;
+}
+
+.record small {
+    width: 100%;
+    color: #7d7585;
+    font-size: 12px;
+}
