@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const cors = require("cors");
 const db = require("./db");
 
@@ -12,9 +13,8 @@ app.use(express.json());
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
-}
-)
+    res.sendFile(path.join(__dirname, "public", "index.html"));
+});
 
 app.get("/api/transactions", (req, res) => {
     const sql = `
@@ -134,6 +134,8 @@ app.put("/api/transactions/:id", (req, res) => {
     );
 });
 
-app.listen(3000, () => {
-    console.log("Pennywise server is running at http://localhost:3000");
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`Pennywise server is running at http://localhost:${PORT}`);
 });
